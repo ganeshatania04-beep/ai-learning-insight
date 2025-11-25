@@ -1,0 +1,138 @@
+[
+    {
+        "user_id": 96989,
+        "display_name": "igihcksn",
+        "learning_pattern": {
+            "name": "Fast Learner",
+            "description": "Wah, kamu tipe speed learner! Materi baru langsung nyantol di otak. Tapi tetep ya, jangan sampai kecepatan bikin kamu skip kualitas!"
+        },
+        "most_active_time": {
+            "period": "Afternoon",
+            "period_name": "The Prime-Time Learner",
+            "description": "Siang hari itu prime time kamu! Kepala udah gak ngantuk pagi, tapi juga belum masuk mode capek. Kombinasi perfect buat belajar dengan santai tapi tetap produktif."
+        },
+        "consistency": {
+            "category": "High Consistency",
+            "description": "Konsistensi kamu kelas expert! Disiplin banget sampai belajar udah kayak bagian dari rutinitas harian kamu."
+        }
+    },
+    {
+        "user_id": 938276,
+        "display_name": "nurrizkiadip",
+        "learning_pattern": {
+            "name": "Fast Learner",
+            "description": "Wah, kamu tipe speed learner! Materi baru langsung nyantol di otak. Tapi tetep ya, jangan sampai kecepatan bikin kamu skip kualitas!"
+        },
+        "most_active_time": {
+            "period": "Morning",
+            "period_name": "The Early Bird",
+            "description": "Kamu di pagi hari tuh kayak HP habis di-charge semalaman. Full battery dan fokus maksimal. Dunia masih sepi, vibe masih calm, dan itu bikin kamu gampang banget nyerap materi."
+        },
+        "consistency": {
+            "category": "Medium Consistency",
+            "description": "Cukup konsisten! Kadang ada jeda kecil, tapi overall kamu masih on track. Bisa makin stabil kalau dibantu reminder atau mini-habit."
+        }
+    },
+    {
+        "user_id": 5021477,
+        "display_name": "rifath_2SXp",
+        "learning_pattern": {
+            "name": "Consistent Learner",
+            "description": "Kamu tipe belajar yang slow but steady! Konsistensi kamu tuh keren banget. Pelan tapi pasti. Setiap langkah kecil tetap punya impact, dan kamu selalu buktiin itu."
+        },
+        "most_active_time": {
+            "period": "Morning",
+            "period_name": "The Early Bird",
+            "description": "Kamu di pagi hari tuh kayak HP habis di-charge semalaman. Full battery dan fokus maksimal. Dunia masih sepi, vibe masih calm, dan itu bikin kamu gampang banget nyerap materi."
+        },
+        "consistency": {
+            "category": "High Consistency",
+            "description": "Konsistensi kamu kelas expert! Disiplin banget sampai belajar udah kayak bagian dari rutinitas harian kamu."
+        }
+    },
+    {
+        "user_id": 5044844,
+        "display_name": "ledis_idola_h8Ge",
+        "learning_pattern": {
+            "name": "Consistent Learner",
+            "description": "Kamu tipe belajar yang slow but steady! Konsistensi kamu tuh keren banget. Pelan tapi pasti. Setiap langkah kecil tetap punya impact, dan kamu selalu buktiin itu."
+        },
+        "most_active_time": {
+            "period": "Morning",
+            "period_name": "The Early Bird",
+            "description": "Kamu di pagi hari tuh kayak HP habis di-charge semalaman. Full battery dan fokus maksimal. Dunia masih sepi, vibe masih calm, dan itu bikin kamu gampang banget nyerap materi."
+        },
+        "consistency": {
+            "category": "High Consistency",
+            "description": "Konsistensi kamu kelas expert! Disiplin banget sampai belajar udah kayak bagian dari rutinitas harian kamu."
+        }
+    },
+    {
+        "user_id": 5051374,
+        "display_name": "fkaslana",
+        "learning_pattern": {
+            "name": "Consistent Learner",
+            "description": "Kamu tipe belajar yang slow but steady! Konsistensi kamu tuh keren banget. Pelan tapi pasti. Setiap langkah kecil tetap punya impact, dan kamu selalu buktiin itu."
+        },
+        "most_active_time": {
+            "period": "Evening",
+            "period_name": "The Sunset Scholar",
+            "description": "Kamu tipe yang perlu warm-up dulu sebelum masuk learning mode. Pas sore ke malam, kamu baru dapet vibe yang pas lebih tenang, lebih fokus, dan akhirnya produktif banget. Evening study hits different buat kamu!"
+        },
+        "consistency": {
+            "category": "High Consistency",
+            "description": "Konsistensi kamu kelas expert! Disiplin banget sampai belajar udah kayak bagian dari rutinitas harian kamu."
+        }
+    },
+    {
+        "user_id": 5181638,
+        "display_name": "anggit_andreansyah",
+        "learning_pattern": {
+            "name": "Fast Learner",
+            "description": "Wah, kamu tipe speed learner! Materi baru langsung nyantol di otak. Tapi tetep ya, jangan sampai kecepatan bikin kamu skip kualitas!"
+        },
+        "most_active_time": {
+            "period": "Morning",
+            "period_name": "The Early Bird",
+            "description": "Kamu di pagi hari tuh kayak HP habis di-charge semalaman. Full battery dan fokus maksimal. Dunia masih sepi, vibe masih calm, dan itu bikin kamu gampang banget nyerap materi."
+        },
+        "consistency": {
+            "category": "Medium Consistency",
+            "description": "Cukup konsisten! Kadang ada jeda kecil, tapi overall kamu masih on track. Bisa makin stabil kalau dibantu reminder atau mini-habit."
+        }
+    },
+    {
+        "user_id": 5410562,
+        "display_name": "jeni_amanda_ABFC",
+        "learning_pattern": {
+            "name": "Consistent Learner",
+            "description": "Kamu tipe belajar yang slow but steady! Konsistensi kamu tuh keren banget. Pelan tapi pasti. Setiap langkah kecil tetap punya impact, dan kamu selalu buktiin itu."
+        },
+        "most_active_time": {
+            "period": "Morning",
+            "period_name": "The Early Bird",
+            "description": "Kamu di pagi hari tuh kayak HP habis di-charge semalaman. Full battery dan fokus maksimal. Dunia masih sepi, vibe masih calm, dan itu bikin kamu gampang banget nyerap materi."
+        },
+        "consistency": {
+            "category": "Medium Consistency",
+            "description": "Cukup konsisten! Kadang ada jeda kecil, tapi overall kamu masih on track. Bisa makin stabil kalau dibantu reminder atau mini-habit."
+        }
+    },
+    {
+        "user_id": 5410865,
+        "display_name": "ramadhan_oktarizaldi_02Qj",
+        "learning_pattern": {
+            "name": "Fast Learner",
+            "description": "Wah, kamu tipe speed learner! Materi baru langsung nyantol di otak. Tapi tetep ya, jangan sampai kecepatan bikin kamu skip kualitas!"
+        },
+        "most_active_time": {
+            "period": "Morning",
+            "period_name": "The Early Bird",
+            "description": "Kamu di pagi hari tuh kayak HP habis di-charge semalaman. Full battery dan fokus maksimal. Dunia masih sepi, vibe masih calm, dan itu bikin kamu gampang banget nyerap materi."
+        },
+        "consistency": {
+            "category": "Medium Consistency",
+            "description": "Cukup konsisten! Kadang ada jeda kecil, tapi overall kamu masih on track. Bisa makin stabil kalau dibantu reminder atau mini-habit."
+        }
+    }
+]

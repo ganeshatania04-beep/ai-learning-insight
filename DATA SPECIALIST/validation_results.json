@@ -1,0 +1,22 @@
+{
+  "data_completeness": {
+    "total_samples": 9,
+    "complete_records": 9,
+    "completeness_rate": "100.0%"
+  },
+  "feature_quality": {
+    "total_features": 24,
+    "features_with_variance": 22,
+    "zero_variance_features": 2
+  },
+  "scaling_validation": {
+    "standard_mean_close_to_zero": true,
+    "standard_std_close_to_one": true,
+    "minmax_in_range": true
+  },
+  "business_metrics": {
+    "avg_consistency_score": 42.21333333333333,
+    "avg_completion_rate": 0.0,
+    "active_users_pct": "88.9%"
+  }
+}

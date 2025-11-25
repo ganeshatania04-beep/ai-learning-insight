@@ -1,0 +1,37 @@
+{
+  "processing_date": "2025-11-24 06:15:57",
+  "dataset_summary": {
+    "total_users": 9,
+    "active_users": 8,
+    "users_with_exam_data": 6,
+    "total_features": 24,
+    "feature_categories": {
+      "basic": 11,
+      "advanced": 10
+    }
+  },
+  "feature_statistics": {
+    "consistency_score": {
+      "min": 0.0,
+      "max": 61.05,
+      "mean": 42.21333333333333,
+      "std": 18.42157973681953
+    },
+    "completion_rate": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "exam_performance": {
+      "users_with_exams": 6,
+      "avg_score": 82.25833333333333,
+      "avg_pass_rate": 0.8166666666666668
+    }
+  },
+  "data_quality_flags": {
+    "missing_values": 0,
+    "duplicate_users": 0,
+    "all_features_scaled": true,
+    "scalers_saved": true
+  }
+}

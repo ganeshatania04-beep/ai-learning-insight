@@ -1,0 +1,56 @@
+{
+  "basic_features": {
+    "most_active_time": "Waktu paling aktif belajar (Morning/Afternoon/Evening/Late Night)",
+    "active_days_week": "Jumlah hari aktif dalam seminggu terakhir (0-7)",
+    "consistency_score": "Skor konsistensi belajar hybrid (0-100)",
+    "unique_tutorials": "Jumlah tutorial unik yang diakses",
+    "total_accesses": "Total akses ke platform",
+    "completion_rate": "Rasio penyelesaian tutorial (0-1)",
+    "access_intensity": "Intensitas akses (total_access/unique_tutorials)",
+    "engagement_level": "Level engagement (Low/Medium/High)",
+    "avg_exam_score": "Rata-rata skor ujian (0-100)",
+    "exam_pass_rate": "Rasio kelulusan ujian (0-1)",
+    "has_exam_data": "Flag user dengan data ujian valid"
+  },
+  "advanced_features": {
+    "learning_efficiency": "Efisiensi belajar (1/avg_completion_time)",
+    "avg_session_duration": "Rata-rata durasi sesi belajar (jam)",
+    "avg_unique_hours_active": "Rata-rata jam unik aktif per hari",
+    "max_daily_access": "Maksimum akses dalam satu hari",
+    "avg_active_days_week": "Rata-rata hari aktif per minggu",
+    "std_active_days_week": "Standar deviasi hari aktif (konsistensi)",
+    "total_weeks_active": "Total minggu dengan aktivitas",
+    "temporal_consistency_score": "Skor konsistensi temporal (0-100)",
+    "preferred_hour": "Jam preferensi belajar (0-23)",
+    "preferred_day_of_week": "Hari preferensi (0=Mon, 6=Sun)"
+  },
+  "scaling_info": {
+    "standard_scaling": {
+      "description": "Z-score normalization (mean=0, std=1)",
+      "use_case": "Recommended untuk K-Means clustering",
+      "formula": "(x - mean) / std"
+    },
+    "minmax_scaling": {
+      "description": "Normalization ke range [0, 1]",
+      "use_case": "Alternative untuk algoritma sensitif terhadap scale",
+      "formula": "(x - min) / (max - min)"
+    }
+  },
+  "clustering_recommendations": {
+    "algorithm": "K-Means",
+    "recommended_k": "3-4 clusters",
+    "features_priority": [
+      "consistency_score_standard",
+      "completion_rate_standard",
+      "temporal_consistency_score_standard",
+      "access_intensity_standard",
+      "learning_efficiency_standard"
+    ],
+    "expected_clusters": [
+      "Consistent Learner: High consistency, steady pace",
+      "Fast Learner: High completion rate, high intensity",
+      "Reflective Learner: Moderate pace, high exam scores",
+      "Casual Learner: Low consistency, sporadic activity"
+    ]
+  }
+}

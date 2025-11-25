@@ -1,0 +1,10 @@
+user_id,display_name,most_active_time,active_days_week,consistency_score,unique_tutorials,total_accesses,completed_count,completion_rate,access_intensity,engagement_level,avg_exam_score,std_exam_score,exam_attempts,exam_pass_rate,has_exam_data,avg_completion_time,learning_efficiency,max_daily_access,avg_session_duration,avg_unique_hours_active,avg_active_days_week,std_active_days_week,total_weeks_active,avg_weekly_accesses,std_weekly_accesses,temporal_consistency_score,preferred_hour,preferred_day_of_week
+96989.0,igihcksn,Afternoon,0.0,50.0,3067.0,3069.0,0.0,0.0,1.0,High Engagement,71.46,25.97,336.0,0.6,1,185.141279677113,0.005,101.0,2.33,2.16,2.06,1.2,114.0,26.92,38.11,45.45,21.0,6.0
+938276.0,nurrizkiadip,Morning,0.0,43.87,2203.0,2205.0,0.0,0.0,1.0,High Engagement,84.2,22.52,178.0,0.83,1,4971.775947288453,0.0,72.0,3.68,2.45,2.45,1.63,130.0,16.96,21.09,38.02,16.0,6.0
+5021477.0,rifath_2SXp,Morning,2.0,54.29,187.0,187.0,0.0,0.0,1.0,Medium Engagement,85.05,19.77,21.0,0.86,1,0.8014262246117085,1.248,96.0,0.5,1.5,2.0,0.0,2.0,93.5,7.78,100.0,11.0,2.0
+5044844.0,ledis_idola_h8Ge,Morning,2.0,59.29,960.0,960.0,0.0,0.0,1.0,High Engagement,91.57,14.03,106.0,0.97,1,4.512357908222688,0.222,200.0,1.26,1.52,2.21,1.37,14.0,68.57,88.01,42.19,9.0,4.0
+5051374.0,fkaslana,Evening,3.0,61.05,157.0,157.0,0.0,0.0,1.0,Medium Engagement,68.27,26.08,33.0,0.64,1,14.256534050179212,0.07,46.0,2.31,1.88,2.0,1.2,8.0,19.62,22.23,45.45,19.0,3.0
+5181638.0,anggit_andreansyah,Morning,1.0,37.14,13.0,13.0,0.0,0.0,1.0,Low Engagement,0.0,0.0,0.0,0.0,0,0.0020512820512820513,487.5,13.0,0.0,1.0,1.0,1.2,1.0,13.0,22.23,0.0,9.0,4.0
+5410562.0,jeni_amanda_ABFC,Morning,1.0,37.14,38.0,38.0,0.0,0.0,1.0,Low Engagement,93.0,10.95,5.0,1.0,1,0.03156156156156156,31.684,38.0,1.0,2.0,1.0,1.2,1.0,38.0,22.23,0.0,8.0,4.0
+5410865.0,ramadhan_oktarizaldi_02Qj,Morning,1.0,37.14,12.0,12.0,0.0,0.0,1.0,Low Engagement,0.0,0.0,0.0,0.0,0,0.002138888888888889,467.532,12.0,0.0,1.0,1.0,1.2,1.0,12.0,22.23,0.0,9.0,4.0
+0.0,Unknown User,Morning,0.0,0.0,0.0,0.0,0.0,0.0,0.0,No Activity,0.0,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
