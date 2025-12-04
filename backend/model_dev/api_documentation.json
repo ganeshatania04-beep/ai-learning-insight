@@ -1,0 +1,58 @@
+{
+    "version": "1.0",
+    "endpoints": {
+        "user_insight": {
+            "method": "GET",
+            "path": "/api/v1/user-insight/{user_id}",
+            "description": "Get complete user insight with 3 features: Learning Pattern, Most Active Time, and Consistency",
+            "output_features": {
+                "learning_pattern": {
+                    "name": "string",
+                    "description": "string"
+                },
+                "most_active_time": {
+                    "period": "string",
+                    "period_name": "string",
+                    "description": "string"
+                },
+                "consistency": {
+                    "category": "string",
+                    "description": "string"
+                }
+            }
+        },
+        "time_distribution": {
+            "method": "GET",
+            "path": "/api/v1/time-distribution/{user_id}",
+            "description": "Get time period distribution for a user",
+            "output": {
+                "user_id": "integer",
+                "Morning": "integer (count)",
+                "Afternoon": "integer (count)",
+                "Evening": "integer (count)",
+                "Late Night": "integer (count)",
+                "Morning_percentage": "float",
+                "Afternoon_percentage": "float",
+                "Evening_percentage": "float",
+                "Late Night_percentage": "float",
+                "total": "integer"
+            }
+        },
+        "predict_cluster": {
+            "method": "POST",
+            "path": "/api/v1/predict-cluster",
+            "description": "Predict cluster for new user based on features",
+            "input": "Array of 48 scaled features",
+            "output": {
+                "predicted_cluster": "integer",
+                "learning_pattern_name": "string",
+                "confidence_score": "float (0-1)"
+            }
+        }
+    },
+    "models": {
+        "clustering": "KMeans",
+        "predictor": "random_forest",
+        "n_clusters": 3
+    }
+}

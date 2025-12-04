@@ -1,12 +1,16 @@
-// src/routes/insightRoutes.js
 const express = require('express');
 const router = express.Router();
-const { getInsights, saveMLInsights } = require('../controllers/insightController');
+const {
+  getCurrentInsights,
+  getInsightsHistory,
+  regenerateInsights,
+  batchGenerateInsights
+} = require('../controllers/insightController');
 
-// Endpoint untuk menerima data dari ML
-router.post('/save', saveMLInsights);
+router.post('/batch/generate', batchGenerateInsights);
+router.get('/:userId', getCurrentInsights);
+router.get('/:userId/history', getInsightsHistory);
+router.post('/:userId/regenerate', regenerateInsights);
 
-// Endpoint untuk frontend ambil data
-router.get('/', getInsights);
 
 module.exports = router;

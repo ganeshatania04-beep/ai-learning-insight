@@ -1,54 +1,72 @@
 const mongoose = require('mongoose');
 
 const insightSchema = new mongoose.Schema({
-  user_id: {
+  userId: {
     type: String,
+    required: true,
+    index: true
+  },
+  weekStart: {
+    type: Date,
+    required: true,
+    index: true
+  },
+  weekEnd: {
+    type: Date,
     required: true
   },
-  
-  most_active_time: {
+  mostActiveTime: {
     type: String,
-    enum: ['pagi', 'siang', 'malam'],
-    default: null
+    enum: ['morning', 'afternoon', 'evening', 'night'],
+    required: true
   },
-  most_active_time_detail: {
-    type: mongoose.Schema.Types.Mixed, 
-    default: {}
-  },
-  
-  consistency_score: {
+  consistencyScore: {
     type: Number,
     min: 0,
-    max: 1,
+    max: 100,
+    required: true
+  },
+  daysActive: {
+    type: Number,
+    min: 0,
+    max: 7,
+    required: true
+  },
+  learningPattern: {
+    type: String,
+    enum: ['Consistent Learner', 'Fast Learner', 'Reflective Learner'],
+    required: true
+  },
+  totalDuration: {
+    type: Number,
+    required: true,
+    min: 0
+  },
+  totalActivities: {
+    type: Number,
+    required: true,
+    min: 0
+  },
+  completionRate: {
+    type: Number,
+    min: 0,
+    max: 100,
+    required: true
+  },
+  avgScore: {
+    type: Number,
+    min: 0,
+    max: 100,
     default: 0
   },
-  consistency_message: {
+  insights: {
     type: String,
-    default: ''
-  },
-  
-  learning_pattern: {
-    type: String,
-    enum: ['consistent learner', 'fast learner', 'reflective learner'],
-    default: null
-  },
-  
-  additional_data: {
-    type: mongoose.Schema.Types.Mixed,
-    default: {}
-  },
-  
-  generated_at: {
-    type: Date,
-    default: Date.now
-  },
-  
-  created_at: {
-    type: Date,
-    default: Date.now
+    required: true
   }
 }, {
-  timestamps: true 
+  timestamps: true
 });
+
+insightSchema.index({ userId: 1, weekStart: -1 });
 
 module.exports = mongoose.model('Insight', insightSchema);

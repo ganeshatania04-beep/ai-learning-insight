@@ -1,46 +1,139 @@
-const Insight = require('../models/insight');
+const LearningActivity = require('../models/LearningActivity');
+const Insight = require('../models/Insight');
+const { generateInsights } = require('../services/mlService');
 
-exports.saveMLInsights = async (req, res) => {
+const getCurrentInsights = async (req, res, next) => {
   try {
-    const insightData = req.body;
-    
-    const insight = await Insight.create(insightData);
-    
-    res.status(201).json({
+    const { userId } = req.params;
+
+    const activities = await LearningActivity.find({ userId })
+      .sort({ date: -1 })
+      .limit(50);
+
+    if (activities.length === 0) {
+      return res.json({
+        success: true,
+        message: 'Belum ada aktivitas belajar',
+        data: null
+      });
+    }
+
+    const result = await generateInsights(activities);
+
+    const insight = await Insight.create({
+      userId,
+      weekStart: new Date(),
+      weekEnd: new Date(),
+      ...result
+    });
+
+    res.json({
       success: true,
-      message: 'Insight berhasil disimpan',
       data: insight
     });
+
   } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
   }
 };
 
-exports.getInsights = async (req, res) => {
+const getInsightsHistory = async (req, res, next) => {
   try {
-    const { user_id } = req.query;
-    
-    let query = {};
-    if (user_id) {
-      query.user_id = user_id;
-    }
-    
-    const insights = await Insight.find(query)
-      .sort({ created_at: -1 })
-      .limit(10);
-    
-    res.status(200).json({
+    const { userId } = req.params;
+    const { limit = 10 } = req.query;
+
+    const insights = await Insight.find({ userId })
+      .sort({ createdAt: -1 })
+      .limit(parseInt(limit));
+
+    res.json({
       success: true,
       count: insights.length,
       data: insights
     });
+
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message
-    });
+    next(error);
   }
+};
+
+const regenerateInsights = async (req, res, next) => {
+  try {
+    const { userId } = req.params;
+    
+    // DEBUG: Cek apa yang diterima
+    console.log('UserId:', userId);
+    console.log('Body:', req.body);
+    console.log('Activities:', req.body.activities);
+
+    // Ambil activities dari body (bukan query)
+    const activities = req.body.activities || [];
+
+    if (!activities || activities.length === 0) {
+      return res.status(400).json({
+        success: false,
+        error: 'Tidak ada aktivitas untuk diproses'
+      });
+    }
+
+    const result = await generateInsights(activities);
+
+    const insight = await Insight.create({
+      userId,
+      weekStart: new Date(),
+      weekEnd: new Date(),
+      ...result
+    });
+
+    res.json({
+      success: true,
+      message: 'Insights berhasil di-regenerate',
+      data: insight
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
+
+const batchGenerateInsights = async (req, res, next) => {
+  try {
+    const users = await LearningActivity.distinct('userId');
+    const results = [];
+
+    for (const userId of users) {
+      const activities = await LearningActivity.find({ userId })
+        .sort({ date: -1 })
+        .limit(50);
+
+      if (activities.length > 0) {
+        const result = await generateInsights(activities);
+        
+        const insight = await Insight.create({
+          userId,
+          weekStart: new Date(),
+          weekEnd: new Date(),
+          ...result
+        });
+
+        results.push(insight);
+      }
+    }
+
+    res.json({
+      success: true,
+      message: `Generated insights for ${results.length} users`,
+      data: results
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = {
+  getCurrentInsights,
+  getInsightsHistory,
+  regenerateInsights,
+  batchGenerateInsights
 };
