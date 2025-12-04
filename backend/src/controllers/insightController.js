@@ -61,12 +61,10 @@ const regenerateInsights = async (req, res, next) => {
   try {
     const { userId } = req.params;
     
-    // DEBUG: Cek apa yang diterima
     console.log('UserId:', userId);
     console.log('Body:', req.body);
     console.log('Activities:', req.body.activities);
 
-    // Ambil activities dari body (bukan query)
     const activities = req.body.activities || [];
 
     if (!activities || activities.length === 0) {
